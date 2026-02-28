@@ -1,5 +1,8 @@
 'use strict';
 
+/* ── Auto copyright year ── */
+document.getElementById('copy-year').textContent = new Date().getFullYear();
+
 /* ── Nav scroll ── */
 const nav = document.getElementById('nav');
 const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
