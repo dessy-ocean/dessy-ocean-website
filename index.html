@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dessy Ocean — Ghana's Tech Creator of the Year 2024. Tech Reviewer & Digital Creator." />
+  <title>Dessy Ocean — Tech Reviewer & Digital Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Scroll progress dot -->
+  <div class="scroll-dot" id="scrollDot"></div>
+
+  <!-- ── NAV ─────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo"><img src="assets/images/logo.png" alt="Dessy Ocean" class="nav-logo-img" /></a>
+    <div class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#stats">REACH</a>
+      <a href="#work">WORK</a>
+      <a href="#brands">BRANDS</a>
+      <a href="#audience">AUDIENCE</a>
+      <a href="#press">PRESS</a>
+    </div>
+    <a href="#contact" class="nav-cta">WORK WITH ME</a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">ABOUT</a>
+    <a href="#stats">REACH</a>
+    <a href="#work">WORK</a>
+    <a href="#brands">BRANDS</a>
+    <a href="#audience">AUDIENCE</a>
+    <a href="#press">PRESS</a>
+    <a href="#contact">WORK WITH ME</a>
+  </div>
+
+  <!-- ── HERO ────────────────────────────────── -->
+  <section class="hero" id="hero">
+
+    <!-- Left panel: text -->
+    <div class="hero-left">
+      <div class="hero-ghost-title" aria-hidden="true">DESSY</div>
+      <div class="hero-left-content">
+        <p class="hero-award">
+          <span class="hero-award-line"></span>
+          GHANA'S #1 TECH CREATOR · 2024 CREATORS AWARD
+        </p>
+        <h1 class="hero-title">
+          <span class="hero-name">DESSY</span>
+          <span class="hero-name hero-name--lime">OCEAN</span>
+        </h1>
+        <p class="hero-tagline">Digital creator, tech commentator &amp; brand partner — bridging African culture and global technology from Accra to the world.</p>
+        <div class="hero-btns">
+          <a href="#brands" class="hero-btn-primary">VIEW PARTNERSHIPS</a>
+          <a href="#work" class="hero-btn-ghost">WATCH CONTENT ↓</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right panel: photo + rings -->
+    <div class="hero-right">
+      <!-- SCROLL indicator on left edge -->
+      <div class="hero-scroll-indicator">
+        <div class="hero-scroll-line"></div>
+        <span class="hero-scroll-text">SCROLL</span>
+      </div>
+
+      <!-- Decorative concentric rings (absolute, centered in panel) -->
+      <div class="hero-ring hero-ring--outer2"></div>
+      <div class="hero-ring hero-ring--outer1"></div>
+      <div class="hero-ring hero-ring--mid"></div>
+      <div class="hero-ring-dot"></div>
+
+      <!-- Photo (centered via flex) -->
+      <div class="hero-photo-ring">
+        <img
+          src="assets/images/dessy-hero.jpg"
+          alt="Dessy Ocean"
+          class="hero-photo"
+          onerror="this.style.display='none';document.getElementById('heroPH').style.display='flex';"
+        />
+        <div class="hero-photo-placeholder" id="heroPH">
+          <span class="hero-ph-icon">📷</span>
+          <strong>ADD YOUR PHOTO HERE</strong>
+          <span>assets/images/dessy-hero.jpg</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar: right column only -->
+    <div class="hero-statsbar">
+      <div class="hstat">
+        <div class="hstat-value"><span class="hstat-num js-count" data-target="300">0</span><span class="hstat-unit">M+</span></div>
+        <span class="hstat-label">TOTAL VIEWS</span>
+      </div>
+      <div class="hstat">
+        <div class="hstat-value"><span class="hstat-num js-count" data-target="500">0</span><span class="hstat-unit">K+</span></div>
+        <span class="hstat-label">FOLLOWERS</span>
+      </div>
+      <div class="hstat">
+        <div class="hstat-value"><span class="hstat-num js-count" data-target="40">0</span><span class="hstat-unit">+</span></div>
+        <span class="hstat-label">BRAND DEALS</span>
+      </div>
+      <div class="hstat">
+        <div class="hstat-value"><span class="hstat-num js-count" data-target="5">0</span><span class="hstat-unit">+</span></div>
+        <span class="hstat-label">PLATFORMS</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── TICKER ──────────────────────────────── -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-inner">
+      <span class="ticker-item">GHANA'S #1 TECH CREATOR</span>
+      <span class="ticker-item">2024 CREATORS AWARD</span>
+      <span class="ticker-item">230M+ TIKTOK VIEWS</span>
+      <span class="ticker-item">GOOGLE</span>
+      <span class="ticker-item">META</span>
+      <span class="ticker-item">SAMSUNG</span>
+      <span class="ticker-item">APPLE</span>
+      <span class="ticker-item">BINANCE</span>
+      <span class="ticker-item">292K FOLLOWERS</span>
+      <span class="ticker-item">TECH CREATOR OF THE YEAR</span>
+      <span class="ticker-item">ACCRA, GHANA</span>
+      <span class="ticker-item">TIKTOK · INSTAGRAM · YOUTUBE</span>
+      <!-- duplicate set for seamless loop -->
+      <span class="ticker-item">GHANA'S #1 TECH CREATOR</span>
+      <span class="ticker-item">2024 CREATORS AWARD</span>
+      <span class="ticker-item">230M+ TIKTOK VIEWS</span>
+      <span class="ticker-item">GOOGLE</span>
+      <span class="ticker-item">META</span>
+      <span class="ticker-item">SAMSUNG</span>
+      <span class="ticker-item">APPLE</span>
+      <span class="ticker-item">BINANCE</span>
+      <span class="ticker-item">292K FOLLOWERS</span>
+      <span class="ticker-item">TECH CREATOR OF THE YEAR</span>
+      <span class="ticker-item">ACCRA, GHANA</span>
+      <span class="ticker-item">TIKTOK · INSTAGRAM · YOUTUBE</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ───────────────────────────────── -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <p class="section-label">— ABOUT</p>
+      <div class="about-grid">
+
+        <!-- Left: heading + award badge -->
+        <div class="about-left">
+          <h2 class="section-heading">WHERE<br>TECH<br>MEETS<br>CULTURE.</h2>
+          <div class="about-award">
+            <span class="about-award-icon">🏆</span>
+            <div class="about-award-text">
+              <strong>TECH CREATOR OF THE YEAR 2024</strong>
+              <span>CREATORS AWARDS GHANA · PRESENTED BY YT CREATORS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: copy + info table -->
+        <div class="about-right">
+          <p class="about-lead">Desmond Ofori Appiah — known as <em class="about-hl">Dessy Ocean</em> — is Ghana's leading tech content creator, bridging the gap between cutting-edge technology and everyday African life.</p>
+          <p class="about-lead">With a presence spanning <em class="about-hl">TikTok, Instagram, YouTube, LinkedIn, and X</em>, Dessy brings authentic, accessible tech reviews and commentary to millions across Ghana, Nigeria, the US, and beyond.</p>
+          <p class="about-body">From Google HQ in California to Samsung events in Seoul — Dessy has collaborated with the world's most influential tech brands while staying rooted in the African creator community.</p>
+
+          <div class="about-table">
+            <div class="about-row">
+              <span class="about-row-label">LOCATION</span>
+              <span class="about-row-val">Accra, Ghana</span>
+            </div>
+            <div class="about-row">
+              <span class="about-row-label">CATEGORY</span>
+              <span class="about-row-val">Tech · Lifestyle · Digital Culture</span>
+            </div>
+            <div class="about-row">
+              <span class="about-row-label">LANGUAGE</span>
+              <span class="about-row-val">English</span>
+            </div>
+            <div class="about-row">
+              <span class="about-row-label">SOCIAL HANDLE</span>
+              <span class="about-row-val">@dessy_ocean</span>
+            </div>
+            <div class="about-row">
+              <span class="about-row-label">EMAIL</span>
+              <span class="about-row-val">partnerships@dessy-ocean.com</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS ───────────────────────────────── -->
+  <section class="section section-alt" id="stats">
+    <div class="wrap">
+      <p class="section-label">— BY THE NUMBERS</p>
+      <h2 class="section-heading">REACH &amp;<br>IMPACT.</h2>
+    </div>
+
+    <div class="reach-grid wrap">
+
+      <!-- Row 1: Platform totals -->
+      <div class="reach-card">
+        <div class="reach-card-top">
+          <span class="reach-platform">TIKTOK · @DESSY_OCEAN</span>
+          <span class="reach-icon">♪</span>
+        </div>
+        <p class="reach-num"><span class="js-count" data-target="200">0</span>M+</p>
+        <p class="reach-label">TOTAL VIEWS</p>
+      </div>
+
+      <div class="reach-card">
+        <div class="reach-card-top">
+          <span class="reach-platform">INSTAGRAM · @DESSY_OCEAN</span>
+          <span class="reach-icon">⊙</span>
+        </div>
+        <p class="reach-num"><span class="js-count" data-target="100">0</span>M+</p>
+        <p class="reach-label">TOTAL VIEWS</p>
+      </div>
+
+      <div class="reach-card">
+        <div class="reach-card-top">
+          <span class="reach-platform">YOUTUBE</span>
+          <span class="reach-icon">▶</span>
+        </div>
+        <p class="reach-num"><span class="js-count" data-target="800">0</span>K+</p>
+        <p class="reach-label">VIEWS</p>
+      </div>
+
+      <div class="reach-card">
+        <div class="reach-card-top">
+          <span class="reach-platform">X / TWITTER</span>
+          <span class="reach-icon">✕</span>
+        </div>
+        <p class="reach-num"><span class="js-count" data-target="650">0</span>K+</p>
+        <p class="reach-label">TOTAL VIEWS</p>
+      </div>
+
+      <!-- Row 2: TikTok breakdown -->
+      <div class="reach-card">
+        <div class="reach-card-top">
+          <span class="reach-platform">TIKTOK FOLLOWERS</span>
+          <span class="reach-icon">⊕⊕</span>
+        </div>
+        <p class="reach-num">291.9K</p>
+        <p class="reach-label">ALL-TIME</p>
+      </div>
+
+      <div class="reach-card">
+        <div class="reach-card-top">
+          <span class="reach-platform">TIKTOK ENGAGEMENT</span>
+          <span class="reach-icon">♥</span>
+        </div>
+        <p class="reach-num">1.5M+</p>
+        <p class="reach-label">LIKES · 365-DAY</p>
+      </div>
+
+      <div class="reach-card">
+        <div class="reach-card-top">
+          <span class="reach-platform">TIKTOK POST VIEWS</span>
+          <span class="reach-icon">▮▮▮</span>
+        </div>
+        <p class="reach-num"><span class="js-count" data-target="45">0</span>M+</p>
+        <p class="reach-label">365-DAY VIEWS</p>
+      </div>
+
+      <div class="reach-card">
+        <div class="reach-card-top">
+          <span class="reach-platform">TIKTOK SHARES</span>
+          <span class="reach-icon">↑</span>
+        </div>
+        <p class="reach-num">750K</p>
+        <p class="reach-label">365-DAY SHARES</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── WORK ────────────────────────────────── -->
+  <section class="section" id="work">
+    <div class="wrap work-header">
+      <div>
+        <p class="section-label">— FEATURED WORK</p>
+        <h2 class="section-heading">CONTENT<br>THAT HITS.</h2>
+      </div>
+      <p class="work-desc">TECH REVIEWS, PRODUCT LAUNCHES &<br>LIFESTYLE COMMENTARY BUILT FOR<br>MOBILE-FIRST AUDIENCES ACROSS<br>AFRICA AND BEYOND</p>
+    </div>
+
+    <!--
+      HOW TO ADD YOUR VIDEOS
+      ─────────────────────────────────────────────────────
+      YouTube: go to youtube.com → open your video → copy
+      the ID from the URL: youtube.com/watch?v=XXXXXX
+      Replace VIDEO_ID_1 through VIDEO_ID_4 below.
+
+      TikTok: open video on desktop → Share → Embed →
+      copy the video ID number from the embed code.
+      Replace TIKTOK_ID below.
+      ─────────────────────────────────────────────────────
+    -->
+    <div class="work-grid">
+      <div class="work-main">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/MiHZIZ3e_Ws?rel=0&modestbranding=1"
+          title="Featured Video" loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <div class="work-side">
+        <div class="work-side-video">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/jM-tpOGRWy4?rel=0&modestbranding=1"
+            title="Video 2" loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="work-side-video">
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F404849432513141&show_text=false&appId"
+            title="Facebook Reel" loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+          <div class="work-side-label">
+            <span class="work-tag">FACEBOOK REEL</span>
+            <span class="work-vid-title"></span>
+          </div>
+        </div>
+        <div class="work-side-video">
+          <iframe
+            src="https://www.instagram.com/reel/C-lHrpHiiBZ/embed/"
+            title="Instagram Reel" loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BRANDS ──────────────────────────────── -->
+  <section class="section section-alt" id="brands">
+    <div class="wrap">
+      <p class="section-label">— BRAND PARTNERSHIPS</p>
+      <h2 class="section-heading">TRUSTED<br>BY THE BEST.</h2>
+
+      <p class="brands-group-label">GLOBAL TECH GIANTS</p>
+      <div class="brand-tags brand-tags-filled">
+        <span>GOOGLE</span>
+        <span>META</span>
+        <span>SAMSUNG</span>
+        <span>APPLE</span>
+        <span>TIKTOK</span>
+        <span>BINANCE</span>
+        <span>TRANSSION</span>
+        <span>ALIEXPRESS</span>
+      </div>
+
+      <p class="brands-group-label">GLOBAL &amp; REGIONAL PARTNERS</p>
+      <div class="brand-tags brand-tags-outline">
+        <span>MOZILLA</span>
+        <span>TECNO</span>
+        <span>INFINIX</span>
+        <span>MTN</span>
+        <span>GCB BANK</span>
+        <span>PANDA SECURITY</span>
+        <span>YOUTUBE</span>
+        <span>WORLD HEALTH ORGANIZATION</span>
+        <span>HOLLYLAND</span>
+        <span>SOLOLEARN</span>
+        <span>PREMISE DATA</span>
+        <span>DESKTOP.COM</span>
+        <span>BOYA AUDIO</span>
+        <span>WITHKOJI</span>
+        <span>ONUNIVERSE</span>
+        <span>THE SHELF INC.</span>
+        <span>QUICK CREDIT</span>
+        <span>INCLUSIVE FINTECH FORUM</span>
+        <span>AMARAN</span>
+        <span>SMALLRIG</span>
+        <span>OPPO</span>
+        <span>ULTRA HUMAN</span>
+        <span>TELEFONIKA</span>
+        <span>MARINA MALL</span>
+      </div>
+    </div>
+
+    <div class="collab-grid wrap">
+      <div class="collab-card">
+        <p class="collab-eyebrow">BRAND COLLAB · 2024</p>
+        <h3 class="collab-name">GOOGLE</h3>
+        <p class="collab-detail">Mountain View, California — Google AI Research</p>
+      </div>
+      <div class="collab-card">
+        <p class="collab-eyebrow">BRAND COLLAB · 2024</p>
+        <h3 class="collab-name">META</h3>
+        <p class="collab-detail">Menlo Park, California — Influencer Partnership</p>
+      </div>
+      <div class="collab-card">
+        <p class="collab-eyebrow">BRAND COLLAB · 2024</p>
+        <h3 class="collab-name">BINANCE</h3>
+        <p class="collab-detail">George Town, Malta — Crypto &amp; Blockchain</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AUDIENCE ─────────────────────────────── -->
+  <section class="section" id="audience">
+    <div class="wrap">
+      <p class="section-label">— AUDIENCE INSIGHTS</p>
+      <h2 class="section-heading">WHO'S<br>WATCHING.</h2>
+    </div>
+
+    <div class="audience-grid wrap">
+
+      <!-- Age & Gender — TikTok -->
+      <div class="aud-card">
+        <p class="aud-card-title">AGE BREAKDOWN · TIKTOK</p>
+        <div class="bar-list">
+          <div class="bar-row"><span class="bar-label">13–17</span><div class="bar-track"><div class="bar js-bar" style="--pct:0.4%"></div></div><span class="bar-val">0.4%</span></div>
+          <div class="bar-row"><span class="bar-label">18–24</span><div class="bar-track"><div class="bar js-bar" style="--pct:12.9%"></div></div><span class="bar-val">12.9%</span></div>
+          <div class="bar-row"><span class="bar-label">25–34</span><div class="bar-track"><div class="bar js-bar" style="--pct:42.9%"></div></div><span class="bar-val">42.9%</span></div>
+          <div class="bar-row"><span class="bar-label">35–44</span><div class="bar-track"><div class="bar js-bar" style="--pct:25.9%"></div></div><span class="bar-val">25.9%</span></div>
+          <div class="bar-row"><span class="bar-label">45–54</span><div class="bar-track"><div class="bar js-bar" style="--pct:9.1%"></div></div><span class="bar-val">9.1%</span></div>
+          <div class="bar-row"><span class="bar-label">55–64</span><div class="bar-track"><div class="bar js-bar" style="--pct:3%"></div></div><span class="bar-val">3.0%</span></div>
+          <div class="bar-row"><span class="bar-label">65+</span><div class="bar-track"><div class="bar js-bar" style="--pct:5.8%"></div></div><span class="bar-val">5.8%</span></div>
+        </div>
+        <div class="gender-rows">
+          <div class="gender-row"><span class="gender-label">Male</span><div class="gender-track"><div class="gender-bar js-bar" style="--pct:76.7%"></div></div><span class="gender-val">76.7%</span></div>
+          <div class="gender-row"><span class="gender-label">Female</span><div class="gender-track"><div class="gender-bar js-bar" style="--pct:23.3%"></div></div><span class="gender-val">23.3%</span></div>
+        </div>
+      </div>
+
+      <!-- Top Countries — TikTok -->
+      <div class="aud-card">
+        <p class="aud-card-title">TOP COUNTRIES · TIKTOK</p>
+        <div class="country-list">
+          <div class="country-row"><span class="country-name">🇬🇭 Ghana</span><span class="country-pct">49.1%</span></div>
+          <div class="country-row"><span class="country-name">🇺🇸 United States</span><span class="country-pct">25.8%</span></div>
+          <div class="country-row"><span class="country-name">🇬🇧 United Kingdom</span><span class="country-pct">16.2%</span></div>
+          <div class="country-row"><span class="country-name">🇳🇬 Nigeria</span><span class="country-pct">2.2%</span></div>
+          <div class="country-row"><span class="country-name">🇿🇦 South Africa</span><span class="country-pct">1.8%</span></div>
+          <div class="country-row"><span class="country-name">🇰🇪 Kenya</span><span class="country-pct">1.1%</span></div>
+          <div class="country-row"><span class="country-name">🇺🇬 Uganda</span><span class="country-pct">0.9%</span></div>
+        </div>
+      </div>
+
+      <!-- Instagram Reach -->
+      <div class="aud-card">
+        <p class="aud-card-title">INSTAGRAM REACH · APR 2024</p>
+        <div class="bar-list reach-bars">
+          <div class="bar-row"><span class="bar-label">Accounts Reached</span><div class="bar-track"><div class="bar js-bar" style="--pct:100%"></div></div><span class="bar-val">788K</span></div>
+          <div class="bar-row"><span class="bar-label">Accounts Engaged</span><div class="bar-track"><div class="bar js-bar" style="--pct:5.1%"></div></div><span class="bar-val">40K</span></div>
+          <div class="bar-row"><span class="bar-label">Total Followers</span><div class="bar-track"><div class="bar js-bar" style="--pct:20.2%"></div></div><span class="bar-val">159K</span></div>
+        </div>
+      </div>
+
+      <!-- Top Countries — Instagram -->
+      <div class="aud-card">
+        <p class="aud-card-title">TOP COUNTRIES · INSTAGRAM</p>
+        <div class="country-list">
+          <div class="country-row"><span class="country-name">🇬🇭 Ghana</span><span class="country-pct">31.0%</span></div>
+          <div class="country-row"><span class="country-name">🇺🇸 United States</span><span class="country-pct">30.3%</span></div>
+          <div class="country-row"><span class="country-name">🇬🇧 United Kingdom</span><span class="country-pct">10.1%</span></div>
+          <div class="country-row"><span class="country-name">🇳🇬 Nigeria</span><span class="country-pct">5.9%</span></div>
+          <div class="country-row"><span class="country-name">🇿🇦 South Africa</span><span class="country-pct">3.5%</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PRESS ───────────────────────────────── -->
+  <section class="section section-alt" id="press">
+    <div class="wrap">
+      <p class="section-label">— PRESS &amp; MEDIA</p>
+      <h2 class="section-heading">AS SEEN<br>IN.</h2>
+    </div>
+    <div class="press-grid wrap">
+      <div class="press-card">
+        <p class="press-source">THE SUN · TECH</p>
+        <p class="press-headline">I found an Android keyboard that lets ChatGPT AI text your friends for you — it takes 30 seconds to set up</p>
+      </div>
+      <div class="press-card">
+        <p class="press-source">BUSINESS &amp; FINANCIAL TIMES</p>
+        <p class="press-headline">Internet service disruption — Causes, Challenges &amp; Recommendations by Desmond O. Appiah</p>
+      </div>
+      <div class="press-card">
+        <p class="press-source">YFM GHANA · FEATURES</p>
+        <p class="press-headline">Dessy Ocean, Ghana's Tech Creator of the Year 2024 — Creators Awards Ghana</p>
+      </div>
+      <div class="press-card">
+        <p class="press-source">META · OFFICIAL</p>
+        <p class="press-headline">Featured by Meta as part of the official Meta AI content creation campaign</p>
+      </div>
+      <div class="press-card">
+        <p class="press-source">BFT · SUSTAINABLE FINANCE</p>
+        <p class="press-headline">Partnerships necessary for policy formulation to accelerate sustainable finance</p>
+      </div>
+      <div class="press-card">
+        <p class="press-source">GOOGLE · AI RESEARCH EVENT</p>
+        <p class="press-headline">Invited influencer and host at Google AI Research event — Mountain View, California</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ─────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="contact-inner wrap">
+      <div class="contact-left">
+        <h2 class="contact-heading">LET'S<br>WORK<br>TOGETHER.</h2>
+        <p class="contact-sub"><em>Partnerships, events, press — or just to say hello.</em></p>
+      </div>
+      <div class="contact-right">
+        <div class="contact-item">
+          <span class="contact-label">EMAIL</span>
+          <a href="mailto:partnerships@dessy-ocean.com" class="contact-val">partnerships@dessy-ocean.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">LOCATION</span>
+          <span class="contact-val">Accra, Ghana</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">TIKTOK</span>
+          <a href="https://www.tiktok.com/@dessy_ocean" target="_blank" rel="noopener" class="contact-val">@dessy_ocean</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">INSTAGRAM</span>
+          <a href="https://www.instagram.com/dessy_ocean" target="_blank" rel="noopener" class="contact-val">@dessy_ocean</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">LINKEDIN</span>
+          <a href="https://www.linkedin.com/in/desmond-ofori-appiah" target="_blank" rel="noopener" class="contact-val">Desmond Ofori Appiah</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ──────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner wrap">
+      <span>© 2025 Dessy Ocean — All rights reserved</span>
+      <span>Built with purpose · Accra, Ghana</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
