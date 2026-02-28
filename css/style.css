@@ -305,14 +305,7 @@ a { color: inherit; text-decoration: none; }
   position: relative;
 }
 
-/* Subtle radial glow behind circle */
-.hero-right::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(212,240,26,0.05) 0%, transparent 70%);
-  pointer-events: none;
-}
+/* Radial glow removed — slideshow is full-bleed */
 
 /* SCROLL indicator */
 .hero-scroll-indicator {
@@ -340,56 +333,14 @@ a { color: inherit; text-decoration: none; }
   transform: rotate(180deg);
 }
 
-/* Concentric rings (absolute, centered on panel) */
-.hero-ring {
-  position: absolute;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.hero-ring--mid {
-  width: clamp(270px, 34vw, 460px);
-  height: clamp(270px, 34vw, 460px);
-  border: 1px dashed rgba(255,255,255,0.1);
-}
-.hero-ring--outer1 {
-  width: clamp(340px, 43vw, 580px);
-  height: clamp(340px, 43vw, 580px);
-  border: 1px solid rgba(255,255,255,0.05);
-}
-.hero-ring--outer2 {
-  width: clamp(420px, 54vw, 720px);
-  height: clamp(420px, 54vw, 720px);
-  border: 1px solid rgba(255,255,255,0.03);
-}
-
-/* Lime accent dot on mid ring */
-.hero-ring-dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 14px rgba(212,240,26,0.7);
-  top: 50%;
-  left: 50%;
-  /* 4 o'clock position: sin(120°)≈0.866, cos(120°)≈0.5 of mid-ring radius */
-  transform: translate(
-    calc(clamp(135px, 17vw, 230px) * 0.866 - 5px),
-    calc(clamp(135px, 17vw, 230px) * 0.5 - 5px)
-  );
-  z-index: 2;
-}
+/* Concentric rings — hidden now that slideshow is full-bleed */
+.hero-ring, .hero-ring-dot { display: none; }
 
 .hero-photo-ring {
-  position: relative;
-  width: clamp(220px, 28vw, 380px);
-  height: clamp(220px, 28vw, 380px);
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.1);
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  background: rgba(0,0,0,0.4);
+  background: #0d1209;
   z-index: 1;
 }
 
@@ -403,62 +354,80 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Hero Slideshow ── */
 .hero-slideshow {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
 }
 .hero-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 0.8s ease;
-  display: flex;
-  flex-direction: column;
+  transition: opacity 0.9s ease;
 }
 .hero-slide.active {
   opacity: 1;
 }
 .hero-slide img {
   width: 100%;
-  flex: 1;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
   display: block;
-  min-height: 0;
+}
+/* Gradient overlay so caption is readable */
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(0,0,0,0.35) 65%,
+    rgba(0,0,0,0.82) 100%
+  );
+  pointer-events: none;
 }
 .hero-slide-caption {
-  background: rgba(0,0,0,0.72);
-  color: var(--accent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem 1.25rem;
+  z-index: 2;
+  color: #fff;
   font-family: 'Anton', sans-serif;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  text-align: center;
-  padding: 0.55rem 0.75rem;
-  flex-shrink: 0;
-  border-top: 1px solid rgba(212,240,26,0.2);
+  line-height: 1.3;
+}
+.hero-slide-caption::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 0.5rem;
 }
 /* Dot indicators */
 .hero-slide-dots {
   position: absolute;
-  bottom: 2.6rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 1rem;
+  right: 2rem;
   display: flex;
-  gap: 0.4rem;
+  gap: 0.45rem;
   z-index: 4;
 }
 .hero-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.35);
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
 }
 .hero-dot.active {
   background: var(--accent);
-  transform: scale(1.3);
+  transform: scale(1.4);
 }
 
 .hero-photo-placeholder {
