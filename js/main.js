@@ -74,9 +74,9 @@ const countObs = new IntersectionObserver(entries => {
     });
     countObs.unobserve(e.target);
   });
-}, { threshold: 0.3 });
+}, { threshold: 0.15 });
 
-document.querySelectorAll('.hero, .stats-grid').forEach(el => countObs.observe(el));
+document.querySelectorAll('.hero, .reach-grid').forEach(el => countObs.observe(el));
 
 const barObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
