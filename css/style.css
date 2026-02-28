@@ -722,6 +722,76 @@ a { color: inherit; text-decoration: none; }
   color: var(--text);
 }
 
+/* ── EVENTS ── */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-top: 3.5rem;
+  border: 1px solid var(--border);
+}
+.event-card {
+  background: var(--bg-card);
+  padding: 2rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition: background 0.2s;
+}
+.event-card:hover { background: #1a1a16; }
+.event-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.event-role {
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 2px;
+}
+.event-role--speaker  { background: var(--accent); color: #000; }
+.event-role--moderator{ background: var(--accent); color: #000; }
+.event-role--partner  { background: rgba(255,255,255,0.1); color: var(--text); border: 1px solid rgba(255,255,255,0.2); }
+.event-role--coverage { background: rgba(255,255,255,0.06); color: var(--muted); border: 1px solid rgba(255,255,255,0.1); }
+.event-year {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+.event-name {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  line-height: 1.2;
+  text-transform: uppercase;
+  flex: 1;
+}
+.event-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.7;
+  font-weight: 300;
+}
+.event-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.event-location {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
 /* ── BRANDS ── */
 .brands-group-label {
   font-size: 0.65rem;
@@ -1034,6 +1104,7 @@ a.contact-val:hover { opacity: 0.6; }
   .reach-grid { grid-template-columns: repeat(2, 1fr); }
   .work-grid { grid-template-columns: 1fr 1fr; }
   .work-main iframe { min-height: 320px; }
+  .events-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 860px) {
@@ -1044,6 +1115,7 @@ a.contact-val:hover { opacity: 0.6; }
   .collab-grid { grid-template-columns: 1fr; }
   .audience-grid { grid-template-columns: 1fr; }
   .press-grid { grid-template-columns: 1fr 1fr; }
+  .events-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
