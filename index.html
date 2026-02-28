@@ -80,18 +80,42 @@
       <div class="hero-ring hero-ring--mid"></div>
       <div class="hero-ring-dot"></div>
 
-      <!-- Photo (centered via flex) -->
+      <!-- Slideshow (centered via flex) -->
       <div class="hero-photo-ring">
-        <img
-          src="assets/images/dessy-hero.jpg"
-          alt="Dessy Ocean"
-          class="hero-photo"
-          onerror="this.style.display='none';document.getElementById('heroPH').style.display='flex';"
-        />
-        <div class="hero-photo-placeholder" id="heroPH">
-          <span class="hero-ph-icon">📷</span>
-          <strong>ADD YOUR PHOTO HERE</strong>
-          <span>assets/images/dessy-hero.jpg</span>
+        <div class="hero-slideshow">
+          <div class="hero-slide active">
+            <img src="assets/images/dessy-hero.jpg" alt="Dessy Ocean" class="hero-photo" />
+            <div class="hero-slide-caption">GHANA'S #1 TECH CREATOR</div>
+          </div>
+          <div class="hero-slide">
+            <img src="assets/images/event-1.jpg" alt="Accra Indie Filmfest 2025" class="hero-photo" />
+            <div class="hero-slide-caption">ACCRA INDIE FILMFEST 2025</div>
+          </div>
+          <div class="hero-slide">
+            <img src="assets/images/event-2.jpg" alt="Accra Indie Filmfest Panel" class="hero-photo" />
+            <div class="hero-slide-caption">ACCRA INDIE FILMFEST · PANELIST</div>
+          </div>
+          <div class="hero-slide">
+            <img src="assets/images/event-3.jpg" alt="M-KOPA X2D Launch" class="hero-photo" />
+            <div class="hero-slide-caption">M-KOPA X2D LAUNCH EVENT</div>
+          </div>
+          <div class="hero-slide">
+            <img src="assets/images/event-4.jpg" alt="British High Commission" class="hero-photo" />
+            <div class="hero-slide-caption">BRITISH HIGH COMMISSION · ACCRA</div>
+          </div>
+          <div class="hero-slide">
+            <img src="assets/images/event-5.jpg" alt="Tech in Ghana Conference" class="hero-photo" />
+            <div class="hero-slide-caption">TECH IN GHANA CONFERENCE</div>
+          </div>
+        </div>
+        <!-- Dot indicators -->
+        <div class="hero-slide-dots">
+          <span class="hero-dot active" data-idx="0"></span>
+          <span class="hero-dot" data-idx="1"></span>
+          <span class="hero-dot" data-idx="2"></span>
+          <span class="hero-dot" data-idx="3"></span>
+          <span class="hero-dot" data-idx="4"></span>
+          <span class="hero-dot" data-idx="5"></span>
         </div>
       </div>
     </div>

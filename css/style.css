@@ -401,6 +401,66 @@ a { color: inherit; text-decoration: none; }
   display: block;
 }
 
+/* ── Hero Slideshow ── */
+.hero-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  display: flex;
+  flex-direction: column;
+}
+.hero-slide.active {
+  opacity: 1;
+}
+.hero-slide img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  min-height: 0;
+}
+.hero-slide-caption {
+  background: rgba(0,0,0,0.72);
+  color: var(--accent);
+  font-family: 'Anton', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.55rem 0.75rem;
+  flex-shrink: 0;
+  border-top: 1px solid rgba(212,240,26,0.2);
+}
+/* Dot indicators */
+.hero-slide-dots {
+  position: absolute;
+  bottom: 2.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 4;
+}
+.hero-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.hero-dot.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
 .hero-photo-placeholder {
   position: absolute;
   inset: 0;

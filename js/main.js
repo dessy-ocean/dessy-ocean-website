@@ -104,3 +104,37 @@ document.querySelectorAll('.stat-card, .collab-card, .press-card, .aud-card').fo
   el.style.transitionDelay = `${(i % 4) * 80}ms`;
   fadeObs.observe(el);
 });
+
+/* ── Hero Slideshow ── */
+(function () {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots   = document.querySelectorAll('.hero-dot');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+
+  function start() { timer = setInterval(next, 4000); }
+  function stop()  { clearInterval(timer); }
+
+  // Dot click
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      stop();
+      goTo(parseInt(dot.dataset.idx, 10));
+      start();
+    });
+  });
+
+  start();
+})();
